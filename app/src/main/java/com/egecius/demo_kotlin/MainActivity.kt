@@ -12,10 +12,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        showToast("shown from extension function")
-
         val childType = ChildType("name")
 
         childType.baseFunction()
+
+        /* Support lambdas by default */
+        findViewById(R.id.button).setOnClickListener {
+            showToast("shown from extension function")
+        }
+
     }
 }
