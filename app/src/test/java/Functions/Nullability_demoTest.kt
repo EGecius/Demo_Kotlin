@@ -1,7 +1,5 @@
 package Functions
 
-import org.junit.Assert.*
-import org.junit.Before
 import org.junit.Test
 
 /**
@@ -26,6 +24,5 @@ class Nullability_demoTest {
         classUnderTest.thrownNpeBecauseOfExclamationMarks()
         //THEN
     }
-
 
 }
