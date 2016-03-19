@@ -3,7 +3,7 @@ package a_a_BasicSyntax
 /**
  * //todo
  */
-class DefiningFunctions {
+internal class DefiningFunctions {
 
     /** Function having two Int parameters with Int return type */
     fun sum (a: Int, b: Int): Int {
