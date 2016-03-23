@@ -1,7 +1,9 @@
-package DataClasses;
+package c_Classes_and_Objects;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import c_Classes_and_Objects.DataClasses.Artist;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
