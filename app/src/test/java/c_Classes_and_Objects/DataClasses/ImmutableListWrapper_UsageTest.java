@@ -35,8 +35,9 @@ public class ImmutableListWrapper_UsageTest {
 		assertThat(list.get(0)).isEqualTo(ORIGINAL_VALUE);
 	}
 
+	/** Shows that Kotlin's data class can be amended */
 	@Test
-	public void when_listRetrieved_and_amended_then() {
+	public void when_listRetrieved_and_amended_then_originalIsAmended() {
 		//WHEN
 		ImmutableListWrapper immutable = sample.getImmutableListWrapper(list);
 		//THEN
@@ -45,7 +46,8 @@ public class ImmutableListWrapper_UsageTest {
 		listRetrieved.clear();
 
 		List<String> listOriginal = immutable.getList();
-		assertThat(listOriginal.size()).isEqualTo(1);
+		//list has been cleared - not immutable!
+		assertThat(listOriginal.size()).isEqualTo(0);
 	}
 
 }

@@ -22,7 +22,7 @@ class ImmutableListWrapperTestKotlin {
 
     /** Lists retrieved are read-only */
     @Test
-    fun when_getCalled_then_orignalValueFound() {
+    fun when_getCalled_then_originalValueFound() {
         //WHEN
         val list: List<String> = wrapper.list;
 
@@ -30,6 +30,16 @@ class ImmutableListWrapperTestKotlin {
 
         //THEN
         assertThat(valueFound).isEqualTo("original")
+    }
+
+    /** Lists retrieved are read-only */
+    @Test
+    fun when_getCalled_then_cantBeAdded() {
+        //WHEN
+        val list: List<String> = wrapper.list;
+
+        // does not compile because Kotlin's List has no setters and seem to be immutable
+//        val valueFound = list.add("my_string");
     }
 
 }
