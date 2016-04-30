@@ -7,8 +7,8 @@ open class Derived : Base() {
         super.openFunction()
     }
 
-    /** As a final function, it can't be overriden */
-    final override fun openFunction2() {
+    /** As a final function, it can't be overridden */
+    override fun openFunction2() {
         super.openFunction2()
     }
 }

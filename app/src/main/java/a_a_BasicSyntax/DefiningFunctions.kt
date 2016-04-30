@@ -18,7 +18,7 @@ internal class DefiningFunctions {
         print(a + b)
     }
 
-    /** Unit return type can be omitted:  */
+    /** Same as above - Unit return type can be omitted:  */
 
     fun printSumWitoutDefinedReturnType(a: Int, b: Int) {
         print(a + b)
