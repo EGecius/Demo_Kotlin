@@ -8,6 +8,8 @@ import c_Classes_and_Objects.DataClasses.Artist
  */
 class Nullability_demo {
 
+    var nullableArtist : Artist? = null
+
     internal fun successfulInstantiation() {
         val artist = Artist(0, "egis", "url", "mbid")
         val string = artist.toString()
@@ -40,8 +42,11 @@ class Nullability_demo {
     }
 
     fun thrownNpeBecauseOfExclamationMarks() {
-        var artist: Artist? = null
-        artist!!.print()
-
+        nullableArtist!!.print()
     }
+
+    fun setVarNotNull() {
+        nullableArtist = Artist(0, "name", "url", "mbdi")
+    }
+
 }
