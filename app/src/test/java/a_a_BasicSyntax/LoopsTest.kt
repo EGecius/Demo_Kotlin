@@ -25,4 +25,11 @@ class LoopsTest {
         assert(sum == 10)
     }
 
+    @Test
+    fun when__then_3() {
+        val sum = loops.sumWithForiLoopReplacement(4)
+        //THEN
+        assert(sum == 10)
+    }
+
 }

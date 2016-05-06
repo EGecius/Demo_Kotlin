@@ -25,4 +25,15 @@ internal class Loops {
         return sum
     }
 
+    /* This replaces traditional 'fori' loop */
+    fun sumWithForiLoopReplacement(count: Int) : Int {
+
+        var sum = 0
+        for (i in 0..count) {
+            sum += i
+        }
+
+        return sum
+    }
+
 }
