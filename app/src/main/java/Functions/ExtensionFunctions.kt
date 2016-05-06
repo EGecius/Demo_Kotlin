@@ -1,7 +1,6 @@
 package Functions
 
 import android.app.Activity
-import android.util.Log
 import android.widget.Toast
 import com.egecius.demo_kotlin.types.ParentType
 
@@ -18,7 +17,7 @@ fun Activity.showToast(message: CharSequence, duration: Int = Toast.LENGTH_SHORT
     Toast.makeText(this, message, duration).show()
 }
 
-fun ParentType.baseFunction(arg: String = "default") {
-    Log.v("Eg:ExtensionFunctions:23", "arg = " + arg)
+fun ParentType.doubleTheString(arg: String = "default") : String {
+   return arg + arg
 }
 

@@ -1,6 +1,6 @@
 package com.egecius.demo_kotlin
 
-import Functions.baseFunction
+import Functions.doubleTheString
 import Functions.showToast
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         val childType = ChildType("name")
 
-        childType.baseFunction()
+        childType.doubleTheString()
 
         /* Support lambdas by default */
         findViewById(R.id.button).setOnClickListener {
