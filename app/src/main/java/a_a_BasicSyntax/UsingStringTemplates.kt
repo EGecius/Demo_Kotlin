@@ -1,14 +1,9 @@
 package a_a_BasicSyntax
 
-/**
- * //todo
- */
-internal class UsingStringTemplates {
+class UsingStringTemplates {
 
-    fun main(args: Array<String>) {
-        if (args.size == 0) return
-
-        print("First argument: ${args[0]}")
+    fun applyTemplate(args: Array<String>): String {
+        return "First argument: ${args[0]}"
     }
 
 }

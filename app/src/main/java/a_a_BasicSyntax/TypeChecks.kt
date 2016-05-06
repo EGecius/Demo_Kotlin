@@ -6,7 +6,6 @@ internal class TypeChecks {
     fun getDoubleString(obj: Any): String? {
 
         if (obj is String) {
-
             val doubleString = obj + obj
             return doubleString
         }

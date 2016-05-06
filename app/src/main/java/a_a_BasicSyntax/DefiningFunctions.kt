@@ -1,8 +1,5 @@
 package a_a_BasicSyntax
 
-/**
- * //todo
- */
 internal class DefiningFunctions {
 
     /** Function having two Int parameters with Int return type */
@@ -19,7 +16,6 @@ internal class DefiningFunctions {
     }
 
     /** Same as above - Unit return type can be omitted:  */
-
     fun printSumWitoutDefinedReturnType(a: Int, b: Int) {
         print(a + b)
     }

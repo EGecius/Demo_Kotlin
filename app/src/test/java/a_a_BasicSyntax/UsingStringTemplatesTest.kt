@@ -1,6 +1,6 @@
 package a_a_BasicSyntax
 
-import org.junit.Assert.*
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 
 /**
@@ -11,15 +11,10 @@ class UsingStringTemplatesTest {
     internal var templates = UsingStringTemplates()
 
     @Test
-    fun when__then() {
-
-//        val array = Array<String>(3)
-//        array.plus("vienas")
-//
-//        templates.main()
-
-        //THEN
-
+    fun templateDemo() {
+        val array = arrayOf("vienas")
+        val firstArg: String = templates.applyTemplate(array)
+        assertThat(firstArg).isEqualTo("First argument: vienas")
     }
 
 }
