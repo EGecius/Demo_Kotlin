@@ -7,7 +7,7 @@ import org.junit.runners.JUnit4;
 
 import java.util.ArrayList;
 
-import c_Classes_and_Objects.DataClasses.ImmutableListWrapper;
+import c_Classes_and_Objects.f_Data_Classes.ImmutableListWrapper;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -1,6 +1,6 @@
 package Functions
 
-import c_Classes_and_Objects.DataClasses.Artist
+import c_Classes_and_Objects.f_Data_Classes.Artist
 
 /**
  * Shows how code does not compile if NPE becomes a possibility.

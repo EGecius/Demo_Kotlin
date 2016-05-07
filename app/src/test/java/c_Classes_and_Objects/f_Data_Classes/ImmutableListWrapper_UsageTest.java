@@ -1,4 +1,4 @@
-package c_Classes_and_Objects.DataClasses;
+package c_Classes_and_Objects.f_Data_Classes;
 
 import org.junit.Before;
 import org.junit.Test;

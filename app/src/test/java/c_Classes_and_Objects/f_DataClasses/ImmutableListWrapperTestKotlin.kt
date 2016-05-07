@@ -1,6 +1,6 @@
 package c_Classes_and_Objects.f_DataClasses
 
-import c_Classes_and_Objects.DataClasses.ImmutableListWrapper
+import c_Classes_and_Objects.f_Data_Classes.ImmutableListWrapper
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Before
 import org.junit.Test

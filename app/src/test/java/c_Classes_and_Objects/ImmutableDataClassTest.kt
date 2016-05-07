@@ -1,6 +1,6 @@
 package c_Classes_and_Objects
 
-import c_Classes_and_Objects.DataClasses.ImmutableDataClass
+import c_Classes_and_Objects.f_Data_Classes.ImmutableDataClass
 import org.junit.Test
 import org.assertj.core.api.Assertions.assertThat
 
