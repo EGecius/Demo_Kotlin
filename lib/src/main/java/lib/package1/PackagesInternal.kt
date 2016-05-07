@@ -1,10 +1,5 @@
 package lib.package1
 
-/**
- * //todo
- */
-internal class PackagesInternal
-
 fun functionWithoutClassDefault() {
 }
 
