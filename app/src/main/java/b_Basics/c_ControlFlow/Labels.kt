@@ -31,4 +31,16 @@ internal class Labels {
         print(arrayList)
     }
 
+    fun nestedForLoops() {
+        loop@ for (i in 0..2) {
+            for (j in 0..2) {
+                if (i == 1 && j == 2) {
+                    print("breaking outer loop")
+                    break@loop
+                }
+                print("i is $i and j is $j \n")
+            }
+        }
+    }
+
 }

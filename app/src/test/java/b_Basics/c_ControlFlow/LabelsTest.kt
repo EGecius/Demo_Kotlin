@@ -22,7 +22,11 @@ class LabelsTest {
     fun labelForForEach() {
         //simply prints values
         classUnderTest.labelForForEach(intArrayOf(1, 2, 3, 4, 5))
+    }
 
+    @Test
+    fun nestedForLoops() {
+        classUnderTest.nestedForLoops()
     }
 
 }
