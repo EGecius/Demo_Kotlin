@@ -18,5 +18,4 @@ internal class PrimaryWithSecondaryConstructors(val name: String) {
         this.surname = surname
     }
 
-
 }
