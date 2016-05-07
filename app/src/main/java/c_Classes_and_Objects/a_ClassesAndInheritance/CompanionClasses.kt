@@ -15,8 +15,8 @@ class ClassWithCompanionObject {
 
 
     companion object {
-        fun accessInternals() : String {
-            return name
+        fun accessInternals() : String? {
+            return null
         }
     }
 
