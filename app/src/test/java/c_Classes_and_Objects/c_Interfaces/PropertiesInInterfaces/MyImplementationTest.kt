@@ -22,7 +22,7 @@ class MyImplementationTest {
     @Test
     fun when__then() {
         assertThat(myImpl.property).isEqualTo("my_property")
-        assertThat(myImpl.propertyWithImplementation).isEqualTo("set_in_interface")
+        assertThat(myImpl.propertyWithGetter).isEqualTo("set_in_interface")
     }
 
 }
