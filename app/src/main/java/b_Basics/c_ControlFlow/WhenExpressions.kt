@@ -1,4 +1,4 @@
-package a_a_BasicSyntax
+package b_Basics.c_ControlFlow
 
 /**
  * 'when' replaces 'switch'
