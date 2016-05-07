@@ -1,4 +1,4 @@
-package com.egecius.demo_kotlin.types
+package z_android
 
 /**
  * colons replace 'extends'

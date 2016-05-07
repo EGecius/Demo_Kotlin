@@ -1,6 +1,6 @@
-package com.egecius.demo_kotlin.types
+package z_android
 
-import Functions.doubleTheString
+import c_Classes_and_Objects.e_Extensions.doubleTheString
 
 /**
  * Acts as a parent class

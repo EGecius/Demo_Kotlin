@@ -1,10 +1,10 @@
-package com.egecius.demo_kotlin
+package z_android
 
-import Functions.doubleTheString
-import Functions.showToast
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.egecius.demo_kotlin.types.ChildType
+import c_Classes_and_Objects.e_Extensions.doubleTheString
+import c_Classes_and_Objects.e_Extensions.showToast
+import com.egecius.android.R
 
 class MainActivity : AppCompatActivity() {
 
