@@ -1,12 +1,14 @@
-package c_Classes_and_Objects.d_VisibilityModifiers.Module1
+package lib.package1
 
 /**
  * //todo
  */
-// function can be declared outside the package - public is default
+internal class PackagesInternal
+
 fun functionWithoutClassDefault() {
 }
 
+// 'public' marked as redundant because 'public' is default modifier
 public fun functionWithoutClassPublic() {
 }
 
