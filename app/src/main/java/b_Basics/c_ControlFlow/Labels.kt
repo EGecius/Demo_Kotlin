@@ -17,4 +17,18 @@ internal class Labels {
         return arrayList
     }
 
+    fun labelForForEach(array: IntArray) {
+
+        val arrayList = ArrayList<Int>()
+
+        array.forEach {
+            //again, this also returns from lambda, w/o stopping 'forEach' loop. It seems misleading got me since I
+            // would get it would stop 'forEach' loop
+            if (it == 3) return@forEach
+            arrayList.add(it)
+        }
+
+        print(arrayList)
+    }
+
 }
