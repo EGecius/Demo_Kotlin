@@ -1,4 +1,4 @@
-package a_a_BasicSyntax
+package a_GettingStarted.a_BasicSyntax
 
 internal class RangesUsage {
 

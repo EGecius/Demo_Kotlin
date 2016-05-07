@@ -1,4 +1,4 @@
-package a_a_BasicSyntax
+package a_GettingStarted.a_BasicSyntax
 
 import b_Basics.c_ControlFlow.WhenExpressions
 import org.junit.Test

@@ -1,8 +1,7 @@
-package a_a_BasicSyntax
+package a_GettingStarted.a_BasicSyntax
 
-import org.junit.Assert.*
-import org.junit.Test
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.Test
 
 /**
  * Tests for [CollectionsUsage]
