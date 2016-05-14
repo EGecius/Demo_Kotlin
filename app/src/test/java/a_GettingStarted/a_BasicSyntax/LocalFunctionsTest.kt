@@ -8,7 +8,7 @@ import org.junit.Test
 class LocalFunctionsTest {
 
     internal var classUnderTest: LocalFunctions = LocalFunctions()
-    
+
     @Test
     fun when__then() {
         //WHEN
