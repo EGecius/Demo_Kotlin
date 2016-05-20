@@ -12,7 +12,6 @@ fun useMap() {
     val doubled = ints.map { it -> it * 2 }
 }
 
-
 fun transformString(string: String, transform: (String) -> (String)): String {
     return transform(string)
 }
