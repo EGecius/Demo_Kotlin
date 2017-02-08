@@ -15,7 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
  * For som reason tests do not run in this class. Is it because I am trying to test Kotlin class in Java?
  */
 @RunWith(JUnit4.class)
-final class ImmutableListWrapperTestJava {
+public final class ImmutableListWrapperTestJava {
 
 	public static final String ORIGINAL_VALUE = "original value";
 	ImmutableListWrapper wrapper;
