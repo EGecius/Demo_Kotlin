@@ -3,33 +3,38 @@ package a_GettingStarted.a_BasicSyntax
 internal class CollectionsUsage {
 
     fun sum(collection: Collection<Int>): Int {
-
         var sum = 0
         for (integer in collection) {
-            sum += integer;
+            sum += integer
         }
-
         return sum
     }
 
-    fun contains(names: Collection<String>, text: String): Boolean {
+    /** Exactly same as above */
+    fun sumSuccint(collection: Collection<Int>): Int {
+        return collection.sum()
+    }
 
+    fun contains(names: Collection<String>, text: String): Boolean {
         if (text in names) {
             // names.contains(text) is called
             return true
         }
-        return false;
-
+        return false
     }
 
-    fun filter(names: Collection<String>) {
+    fun filterSorted(names: List<String>): List<String> {
 
-        names
+        return names
                 .filter { it.startsWith("A") }
                 .sortedBy { it }
                 .map { it.toUpperCase() }
-                .forEach { print(it + " ") }
     }
 
+    fun filterUnsorted(names: List<String>): List<String> {
+        return names
+                .filter { it.startsWith("A") }
+                .map { it.toUpperCase() }
+    }
 
 }

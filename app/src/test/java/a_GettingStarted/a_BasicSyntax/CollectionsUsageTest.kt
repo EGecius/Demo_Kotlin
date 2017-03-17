@@ -37,7 +37,21 @@ class CollectionsUsageTest {
     @Test
     fun when__then_4() {
         val collection = mutableListOf("Andy", "Abbey", "Sam", "John", "Pete")
-        val doesContain = collections.filter(collection)
+        val sorted = collections.filterSorted(collection)
+
+        assertThat(sorted.size).isEqualTo(2)
+        assertThat(sorted[0]).isEqualTo("ABBEY")
+        assertThat(sorted[1]).isEqualTo("ANDY")
+    }
+
+    @Test
+    fun when__then_5() {
+        val collection = mutableListOf("Andy", "Abbey", "Sam", "John", "Pete")
+        val sorted = collections.filterUnsorted(collection)
+
+        assertThat(sorted.size).isEqualTo(2)
+        assertThat(sorted[0]).isEqualTo("ANDY")
+        assertThat(sorted[1]).isEqualTo("ABBEY")
     }
 
 }
