@@ -1,8 +1,8 @@
 package y_mocking
 
-import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.mockito.InjectMocks
 import org.mockito.Mock
 import org.mockito.Mockito.verify
 import org.mockito.junit.MockitoJUnitRunner
@@ -15,11 +15,7 @@ class ContainerTest2 {
 
     @Mock lateinit var dependency : Dependency
 
-    lateinit var container : Container
-
-    @Before fun setup() {
-        container = Container(dependency)
-    }
+    @InjectMocks lateinit var container : Container
 
     @Test
     fun mockitoWorks() {
