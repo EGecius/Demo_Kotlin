@@ -10,12 +10,12 @@ import org.mockito.junit.MockitoJUnitRunner
 /**
  * In order for this to work, rename file in test/resources/mockito-extensions to 'org.mockito
  * .plugins.MockMaker'. However, this slows down running of unit tests by about 5 seconds
- * 
+ *
  * Shows how even mocking of a final class 'DependencyImpl' is possible with MockMaker, which was
  * added to in Mockito 2
  */
 @RunWith(MockitoJUnitRunner::class)
-class ContainerTest3 {
+class ContainerTest_Final {
 
     @Mock lateinit var dependency : DependencyImpl
 

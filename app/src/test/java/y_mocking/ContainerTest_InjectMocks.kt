@@ -11,7 +11,7 @@ import org.mockito.junit.MockitoJUnitRunner
  * Tests for [Container]
  */
 @RunWith(MockitoJUnitRunner::class)
-class ContainerTest2 {
+class ContainerTest_InjectMocks {
 
     @Mock lateinit var dependency : Dependency
 
