@@ -18,6 +18,19 @@ class SealedClassUsage {
         is Expr.Sum -> eval(exp.e1) + eval(exp.e2)
         Expr.NotANumber -> Double.NaN
     }
+
+    fun eval(animal : Animal) : String {
+
+        when (animal) {
+            is Animal.Dog -> return "Dog"
+            is Animal.Cat -> return "Cat"
+            is Animal.Mouse -> return "Cat"
+        }
+
+        /* Compiler recognises that all type have been covered above, and indicates that last line
+         is redundant */
+        return "Unknown"
+    }
 }
 
 sealed class Expr {
@@ -26,4 +39,13 @@ sealed class Expr {
     class Sum(val e1: Expr, val e2: Expr) : Expr()
 
     object NotANumber : Expr()
+}
+
+sealed class Animal (val age :Int) {
+
+    class Dog(age :Int) : Animal(age)
+    class Cat(age :Int) : Animal(age)
+    class Mouse(age :Int) : Animal(age)
+
+
 }
