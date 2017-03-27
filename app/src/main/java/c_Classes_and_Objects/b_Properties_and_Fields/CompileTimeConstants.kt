@@ -1,9 +1,6 @@
 package c_Classes_and_Objects.b_Properties_and_Fields
 
-/**
- * //todo
- */
-internal class CompileTimeConstants()
+internal class CompileTimeConstants
 
 /** Properties the value of which is known at compile time can be marked as compile time constants using the const
  * modifier
