@@ -2,8 +2,11 @@ package y_mocking
 
 class Container(val dependency: Dependency) {
 
-    fun doTheThing() {
-        dependency.alsoDoSomething()
+    fun doTheThing(i: Int) {
+        dependency.alsoDoSomething(i, object : Dependency.Callback {
+            override fun onSuccess() {
+            }
+        })
     }
 
 }

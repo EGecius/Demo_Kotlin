@@ -3,7 +3,12 @@ package y_mocking
 class DependencyImpl : Dependency
 
 interface Dependency {
-    fun alsoDoSomething() {
+
+    interface Callback {
+        fun onSuccess()
+    }
+
+    fun alsoDoSomething(i: Int, param: Callback) {
     }
 
 }

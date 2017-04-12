@@ -1,9 +1,10 @@
 package y_mocking
 
+import com.nhaarman.mockito_kotlin.any
+import com.nhaarman.mockito_kotlin.verify
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mock
-import org.mockito.Mockito.verify
 import org.mockito.junit.MockitoJUnitRunner
 
 /**
@@ -19,9 +20,9 @@ class ContainerTest_byLazy {
     @Test
     fun mockitoWorks() {
         //WHEN
-        container.doTheThing()
+        container.doTheThing(4)
         //THEN
-        verify(dependency).alsoDoSomething()
+        verify(dependency).alsoDoSomething(4, any())
     }
 
 }
