@@ -16,7 +16,7 @@ class LazyDemoTest {
     }
 
     @Test
-    fun when__then() {
+    fun demonstrateThatLazyBlockIsExecutedJustOnce() {
         //WHEN
 
         //check initial value
@@ -28,6 +28,14 @@ class LazyDemoTest {
             demo.lazyVal
             assert(demo.count == 1)
         }
+    }
+
+    @Test
+    fun demonstrateThatLazyBlockUsesLastLastLineAsValue() {
+        //WHEN
+
+        //check initial value
+        assert(demo.lazyVal == "string that will be set to lazyVal")
 
     }
 
