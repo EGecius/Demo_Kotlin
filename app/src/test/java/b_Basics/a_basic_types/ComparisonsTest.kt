@@ -48,7 +48,7 @@ class ComparisonsTest {
         //WHEN
         val string1 = "1"
         val string2 = "1"
-        val isSame = tested.compareByReference(string1, string2)
+        val isSame = tested.compareByEquality(string1, string2)
         //THEN
         assertThat(isSame).isTrue()
     }
@@ -58,7 +58,7 @@ class ComparisonsTest {
         //WHEN
         val string1 = "1"
         val string2 = "2"
-        val isSame = tested.compareByReference(string1, string2)
+        val isSame = tested.compareByEquality(string1, string2)
         //THEN
         assertThat(isSame).isFalse()
     }
