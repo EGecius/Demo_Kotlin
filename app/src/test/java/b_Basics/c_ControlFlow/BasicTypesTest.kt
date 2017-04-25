@@ -28,4 +28,18 @@ class BasicTypesTest {
         assertThat(result).isEqualTo("")
     }
 
+    @Test
+    fun when_getStringTemplate() {
+    	//GIVEN
+        val ressult = tested.getStringTemplate()
+        assertThat(ressult).isEqualTo("i = 10")
+    }
+
+    @Test
+    fun when_getStringTemplateWithArbitraryExpression() {
+        //GIVEN
+        val ressult = tested.getStringTemplateWithArbitraryExpression()
+        assertThat(ressult).isEqualTo("abc.length is 3")
+    }
+
 }
