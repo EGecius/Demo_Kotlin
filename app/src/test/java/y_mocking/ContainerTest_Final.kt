@@ -1,6 +1,7 @@
 package y_mocking
 
 import com.nhaarman.mockito_kotlin.any
+import com.nhaarman.mockito_kotlin.eq
 import com.nhaarman.mockito_kotlin.verify
 import org.junit.Before
 import org.junit.Test
@@ -32,7 +33,7 @@ class ContainerTest_Final {
         //WHEN
         container.doTheThing(4)
         //THEN
-        verify(dependency).alsoDoSomething(4, any())
+        verify(dependency).alsoDoSomething(eq(4), any())
     }
 
 }
