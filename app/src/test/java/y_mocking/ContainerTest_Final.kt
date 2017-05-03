@@ -9,7 +9,8 @@ import org.mockito.Mock
 import org.mockito.junit.MockitoJUnitRunner
 
 /**
- * In order for this to work, rename file in test/resources/mockito-extensions to 'org.mockito
+ * In order for this to work, rename file in test/resources/mockito-extensions from
+ * 'MockMakerToRename' to 'org.mockito
  * .plugins.MockMaker'. However, this slows down running of unit tests by about 5 seconds
  *
  * Shows how even mocking of a final class 'DependencyImpl' is possible with MockMaker, which was
