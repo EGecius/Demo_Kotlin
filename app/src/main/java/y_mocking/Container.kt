@@ -9,4 +9,11 @@ class Container(val dependency: Dependency) {
         })
     }
 
+    fun takeDataObject(dataObject: DataObject) {
+        dependency.alsoDoSomething(dataObject, object : Dependency.Callback {
+            override fun onSuccess() {
+            }
+        })
+    }
+
 }

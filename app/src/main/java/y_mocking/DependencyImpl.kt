@@ -11,4 +11,8 @@ interface Dependency {
     fun alsoDoSomething(i: Int, param: Callback) {
     }
 
+    fun alsoDoSomething(dataObject: DataObject, param: Callback) {
+
+    }
+
 }

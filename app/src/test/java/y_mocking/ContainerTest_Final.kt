@@ -21,6 +21,7 @@ import org.mockito.junit.MockitoJUnitRunner
 class ContainerTest_Final {
 
     @Mock lateinit var dependency : DependencyImpl
+    @Mock lateinit var dataObject : DataObject
 
     lateinit var container : Container
 
@@ -29,11 +30,19 @@ class ContainerTest_Final {
     }
 
     @Test
-    fun mockitoWorks() {
+    fun mockingSimpleFinalClassWorks() {
         //WHEN
         container.doTheThing(4)
         //THEN
         verify(dependency).alsoDoSomething(eq(4), any())
+    }
+
+    @Test
+    fun mockingDataClassWorks() {
+        //WHEN
+        container.takeDataObject(dataObject)
+        //THEN
+        verify(dependency).alsoDoSomething(eq(dataObject), any())
     }
 
 }
