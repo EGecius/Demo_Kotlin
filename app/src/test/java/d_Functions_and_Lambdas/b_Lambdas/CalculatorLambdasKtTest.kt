@@ -31,4 +31,22 @@ class CalculatorLambdasKtTest {
         assert(result == 9)
     }
 
+    @Test
+    fun divideAlternative1() {
+        val result = divideAlternative1(27, 3)
+        assert(result == 9)
+    }
+
+    @Test
+    fun divideAlternative2() {
+        val result = divideAlternative2(27, 3)
+        assert(result == 9)
+    }
+
+    @Test
+    fun divideAlternative3() {
+        val result = divideAlternative3(27, 3)
+        assert(result == 9)
+    }
+
 }
