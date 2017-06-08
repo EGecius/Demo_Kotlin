@@ -22,4 +22,14 @@ class ExtensionsKtTest {
         assertThat(list[2]).isEqualTo(1)
     }
 
+    @Test
+    fun calling_extensionPropertyOnInt() {
+    	//WHEN
+        val myInt: Int = 5
+
+        val myBigDecimal = myInt.bigDecimal
+    	//THEN
+        assertThat(myBigDecimal.intValueExact()).isEqualTo(5)
+    }
+
 }

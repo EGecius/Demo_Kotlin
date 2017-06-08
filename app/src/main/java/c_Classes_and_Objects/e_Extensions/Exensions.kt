@@ -3,6 +3,7 @@ package c_Classes_and_Objects.e_Extensions
 import android.app.Activity
 import android.widget.Toast
 import z_android.ParentType
+import java.math.BigDecimal
 
 fun MutableList<Int>.swap(index1: Int, index2: Int) {
     val tmp = this[index1] // 'this' corresponds to the list
@@ -22,3 +23,10 @@ fun ParentType.doubleTheString(arg: String = "default") : String {
 }
 
 
+/* EXTENSION PROPERTIES */
+
+/* here we are adding an extension property (like extension function) to class [Int]. It returns
+BigDecimal passing Int as argument */
+
+val Int.bigDecimal : BigDecimal
+    get() = BigDecimal(this)
