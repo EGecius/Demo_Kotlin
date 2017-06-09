@@ -19,7 +19,7 @@ class SealedClassUsage {
         Expr.NotANumber -> Double.NaN
     }
 
-    fun eval(animal : Animal) : String {
+    fun eval(animal: Animal): String {
 
         when (animal) {
             is Animal.Dog -> return "Dog"
@@ -41,11 +41,15 @@ sealed class Expr {
     object NotANumber : Expr()
 }
 
-sealed class Animal (val age :Int) {
+/** Sealed class can only have private constructors, so they can only be inherited in the same
+ * file */
+//sealed class Animal public constructor (val age :Int) {
+sealed class Animal constructor(val age: Int) {
 
-    class Dog(age :Int) : Animal(age)
-    class Cat(age :Int) : Animal(age)
-    class Mouse(age :Int) : Animal(age)
-
-
+    class Dog(age: Int) : Animal(age)
+    class Cat(age: Int) : Animal(age)
+    class Mouse(age: Int) : Animal(age)
 }
+
+/** sealed class can also be declared outside the sealed class */
+class Mouse(age: Int) : Animal(age)
