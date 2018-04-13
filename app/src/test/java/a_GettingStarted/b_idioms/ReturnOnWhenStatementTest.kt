@@ -2,6 +2,7 @@ package a_GettingStarted.b_idioms
 
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
+import java.util.*
 
 /**
  * Tests for [ReturnOnWhenStatement]
@@ -22,5 +23,15 @@ class ReturnOnWhenStatementTest {
         assertThat(tested.transform("three")).isEqualTo(0)
     }
 
+    @Test
+    fun traverseMap() {
+
+        val map = HashMap<Int, String>()
+        map.put(1, "vienas")
+        map.put(2, "du")
+        for ((k, v) in map) {
+            println("$k -> $v")
+        }
+    }
 
 }
