@@ -1,6 +1,7 @@
 package a_GettingStarted.a_BasicSyntax
 
 import b_Basics.c_ControlFlow.WhenExpressions
+import org.junit.Assert.assertTrue
 import org.junit.Test
 
 /**
@@ -13,7 +14,7 @@ class WhenExpressionsTest {
     @Test
     fun asExpression() {
         //WHEN
-        val hasPrefix = classUnderTest.asExpression("prefix_Value");
+        val hasPrefix = classUnderTest.asExpression("prefix_Value")
         //THEN
         assert(hasPrefix)
     }
@@ -21,7 +22,7 @@ class WhenExpressionsTest {
     @Test
     fun asExpression2() {
         //WHEN
-        val hasPrefix = classUnderTest.asExpression("Value");
+        val hasPrefix = classUnderTest.asExpression("Value")
         //THEN
         assert(!hasPrefix)
     }
@@ -30,7 +31,7 @@ class WhenExpressionsTest {
     @Test
     fun asStatement() {
         //WHEN
-        val result = classUnderTest.asStatement(1);
+        val result = classUnderTest.asStatement(1)
         //THEN
         assert(result.equals(WhenExpressions.ONE_OR_TWO))
     }
@@ -39,7 +40,7 @@ class WhenExpressionsTest {
     @Test
     fun asStatement2() {
         //WHEN
-        val result = classUnderTest.asStatement(3);
+        val result = classUnderTest.asStatement(3)
         //THEN
         assert(result.equals(WhenExpressions.IN_VALID_NUMBERS))
     }
@@ -47,7 +48,7 @@ class WhenExpressionsTest {
     @Test
     fun asStatement3() {
         //WHEN
-        val result = classUnderTest.asStatement(5);
+        val result = classUnderTest.asStatement(5)
         //THEN
         assert(result.equals(WhenExpressions.BETWEEN_5_AND_10))
     }
@@ -55,7 +56,7 @@ class WhenExpressionsTest {
     @Test
     fun asStatement4() {
         //WHEN
-        val result = classUnderTest.asStatement(11);
+        val result = classUnderTest.asStatement(11)
         //THEN
         assert(result.equals(WhenExpressions.SOMETHING_ELSE))
     }
@@ -63,7 +64,7 @@ class WhenExpressionsTest {
     @Test
     fun expressionAsBranchCondition() {
         //WHEN
-        val result = classUnderTest.expressionAsBranchCondition(5);
+        val result = classUnderTest.expressionAsBranchCondition(5)
         //THEN
         assert(result.equals(WhenExpressions.S_ENCODES_X))
     }
@@ -71,9 +72,15 @@ class WhenExpressionsTest {
     @Test
     fun expressionAsBranchCondition2() {
         //WHEN
-        val result = classUnderTest.expressionAsBranchCondition(6);
+        val result = classUnderTest.expressionAsBranchCondition(6)
         //THEN
         assert(result.equals(WhenExpressions.S_DOES_NOT_ENCODE_X))
+    }
+
+    @Test
+    fun rangeIsInclusive() {
+        assertTrue(1 in 1..3)
+        assertTrue(3 in 1..3)
     }
 
 }
