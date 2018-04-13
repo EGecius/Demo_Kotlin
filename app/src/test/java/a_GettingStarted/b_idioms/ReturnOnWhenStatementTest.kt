@@ -25,10 +25,9 @@ class ReturnOnWhenStatementTest {
 
     @Test
     fun traverseMap() {
-
         val map = HashMap<Int, String>()
-        map.put(1, "vienas")
-        map.put(2, "du")
+        map[1] = "vienas"
+        map[2] = "du"
         for ((k, v) in map) {
             println("$k -> $v")
         }
