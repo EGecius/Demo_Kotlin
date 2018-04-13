@@ -22,7 +22,6 @@ print(c)
 
     fun getStringTemplateWithArbitraryExpression() :String {
         val s = "abc"
-        val str = "$s.length is ${s.length}"
-        return str
+        return "$s.length is ${s.length}"
     }
 }

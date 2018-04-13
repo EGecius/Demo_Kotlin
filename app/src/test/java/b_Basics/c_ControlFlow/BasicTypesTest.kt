@@ -31,15 +31,15 @@ class BasicTypesTest {
     @Test
     fun when_getStringTemplate() {
     	//GIVEN
-        val ressult = tested.getStringTemplate()
-        assertThat(ressult).isEqualTo("i = 10")
+        val result = tested.getStringTemplate()
+        assertThat(result).isEqualTo("i = 10")
     }
 
     @Test
     fun when_getStringTemplateWithArbitraryExpression() {
         //GIVEN
-        val ressult = tested.getStringTemplateWithArbitraryExpression()
-        assertThat(ressult).isEqualTo("abc.length is 3")
+        val result = tested.getStringTemplateWithArbitraryExpression()
+        assertThat(result).isEqualTo("abc.length is 3")
     }
 
 }
