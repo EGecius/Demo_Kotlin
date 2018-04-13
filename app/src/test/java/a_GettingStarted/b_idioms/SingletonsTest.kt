@@ -21,6 +21,9 @@ class SingletonsTest {
         assertThat(Resource.name).isEqualTo("Egis")
 
         assertThat(Resource.nameAppended("my_append")).isEqualTo("Egis_my_append")
+
+        Resource.name
+        Resource.nameAppended("my_append")
     }
 
 }
