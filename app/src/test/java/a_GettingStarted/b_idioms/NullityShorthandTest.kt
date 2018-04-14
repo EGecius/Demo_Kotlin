@@ -1,5 +1,6 @@
 package a_GettingStarted.b_idioms
 
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.junit.MockitoJUnitRunner
@@ -16,12 +17,38 @@ class NullityShorthandTest {
 
     @Test (expected = IllegalStateException::class)
     fun elvisOperatorWithStatement() {
-        val email = getEmail() ?: throw IllegalStateException("Email is missing!")
+        val email = getNull() ?: throw IllegalStateException("Email is missing!")
     }
 
-    private fun getEmail(): String? {
+    private fun getNull(): String? {
         return null
     }
+
+    @Test
+    fun letBlock() {
+        var isLetBlockExecuted = false
+        val value = getNull()
+
+        value?.let {
+            isLetBlockExecuted = true
+        }
+
+        assertThat(isLetBlockExecuted).isFalse()
+    }
+
+    @Test
+    fun letBlock2() {
+        var isLetBlockExecuted = false
+        val value = getNonNull()
+
+        value?.let {
+            isLetBlockExecuted = true
+        }
+
+        assertThat(isLetBlockExecuted).isTrue()
+    }
+
+    private fun getNonNull() = "NonNull"
 
 
 }
