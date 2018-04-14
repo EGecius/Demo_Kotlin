@@ -15,7 +15,7 @@ class NullityShorthandTest {
 
     }
 
-    @Test (expected = IllegalStateException::class)
+    @Test(expected = IllegalStateException::class)
     fun elvisOperatorWithStatement() {
         val email = getNull() ?: throw IllegalStateException("Email is missing!")
     }
@@ -49,6 +49,31 @@ class NullityShorthandTest {
     }
 
     private fun getNonNull() = "NonNull"
+
+    @Test
+    fun mappingWithNullCheck() {
+        val value = getNonNull()
+
+        val mapped = value?.let {
+            transformValue(it)
+        } ?: "defaultValue"
+
+        assertThat(mapped).isEqualTo("NonNull_transformed")
+    }
+
+    private fun transformValue(it: String) = it + "_transformed"
+
+
+    @Test
+    fun mappingWithNullCheck2() {
+        val value = getNull()
+
+        val mapped = value?.let {
+            transformValue(it)
+        } ?: "defaultValue"
+
+        assertThat(mapped).isEqualTo("defaultValue")
+    }
 
 
 }
