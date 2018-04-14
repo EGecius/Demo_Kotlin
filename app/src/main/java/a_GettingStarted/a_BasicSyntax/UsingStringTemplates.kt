@@ -6,4 +6,5 @@ internal class UsingStringTemplates {
         return "First argument: ${args[0]}"
     }
 
+
 }

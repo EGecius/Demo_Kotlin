@@ -18,6 +18,7 @@ class CollectionsUsageTest {
         assertThat(sum).isEqualTo(6)
     }
 
+
     @Test
     fun when__then_2() {
         val mutableListOf = mutableListOf("Sam", "John", "Pete")

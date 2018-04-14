@@ -17,4 +17,13 @@ class UsingStringTemplatesTest {
         assertThat(firstArg).isEqualTo("First argument: vienas")
     }
 
+    @Test
+    fun templateDemo2() {
+        val s1 = "a is 1"
+
+        val s2 = "${s1.replace("is", "was")} but now is 2"
+
+        assertThat(s2).isEqualTo("a was 1 but now is 2")
+    }
+
 }
