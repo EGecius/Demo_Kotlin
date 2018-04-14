@@ -6,7 +6,8 @@ import org.junit.Test
 class BuilderStyleText {
 
     @Test
-    fun builder() {
+    fun `builder with IntArray works`() {
+
         val arrayOfMinusOnes = arrayOfMinusOnes(3)
 
         assertThat(arrayOfMinusOnes).isEqualTo(arrayOf(-1, -1, -1))
