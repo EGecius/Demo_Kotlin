@@ -8,35 +8,35 @@ import org.junit.Test
  */
 class IfExpressionsTest {
 
-    internal var classUnderTest: IfExpressions = IfExpressions()
+    internal var sut: IfExpressions = IfExpressions()
 
     @Test
     fun traditional() {
         //WHEN
-        val result = classUnderTest.getMaxWithTraditionalUsage(3, 4)
+        val result = sut.getMaxWithTraditionalUsage(3, 4)
         //THEN
         assert(result == 4)
     }
 
     @Test
-    fun AsExpression1() {
+    fun asExpression1() {
         //WHEN
-        val result = classUnderTest.getMaxAsExpression1(3, 4)
+        val result = sut.getMaxAsExpression1(3, 4)
         //THEN
         assert(result == 4)
     }
 
     @Test
-    fun AsExpression2() {
+    fun asExpression2() {
         //WHEN
-        val result = classUnderTest.getMaxAsExpression1(3, 4)
+        val result = sut.getMaxAsExpression1(3, 4)
         //THEN
         assert(result == 4)
     }
 
     @Test
-    fun AsExpression3() {
-        val result = classUnderTest.getMaxAsExpression2(3, 4)
+    fun asExpression3() {
+        val result = sut.getMaxAsExpression2(3, 4)
 
         assertThat(result).isEqualTo(4)
     }
