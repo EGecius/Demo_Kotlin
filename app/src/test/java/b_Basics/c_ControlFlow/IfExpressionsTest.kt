@@ -1,5 +1,6 @@
 package b_Basics.c_ControlFlow
 
+import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 
 /**
@@ -31,6 +32,13 @@ class IfExpressionsTest {
         val result = classUnderTest.getMaxAsExpression1(3, 4)
         //THEN
         assert(result == 4)
+    }
+
+    @Test
+    fun AsExpression3() {
+        val result = classUnderTest.getMaxAsExpression2(3, 4)
+
+        assertThat(result).isEqualTo(4)
     }
 
 }
