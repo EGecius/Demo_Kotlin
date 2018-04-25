@@ -21,8 +21,19 @@ class DelegationUsageKtTest {
     fun demoDelegation() {
         val b = BaseImpl(10)
         Derived(b).print()
+    }
 
-        // will print '10
+
+    class DerivedWithOverride(b: Base) : Base by b {
+        override fun print() {
+            print("overridden")
+        }
+    }
+
+    @Test
+    fun demoDelegationOverridden() {
+        val b = BaseImpl(10)
+        DerivedWithOverride(b).print()
     }
 
 }
