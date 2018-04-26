@@ -1,20 +1,17 @@
 package c_Classes_and_Objects.f_Data_Classes;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
-/**
- * Tests for {@link ImmutableListWrapper_Usage}
- */
 public class ImmutableListWrapper_UsageTest {
 
-	public static final String ORIGINAL_VALUE = "original value";
-	ImmutableListWrapper_Usage sample;
+	private static final String ORIGINAL_VALUE = "original value";
+	private ImmutableListWrapper_Usage sample;
 	private ArrayList<String> list;
 
 	@Before
