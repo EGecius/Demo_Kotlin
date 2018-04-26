@@ -3,12 +3,9 @@ package b_Basics.c_ControlFlow
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 
-/**
- * Tests for [BasicTypes]
- */
 class BasicTypesTest {
 
-    internal var tested: BasicTypes = BasicTypes()
+    private var tested: BasicTypes = BasicTypes()
 
     /* demonstrates how string can be formed in Kotlin */
 
