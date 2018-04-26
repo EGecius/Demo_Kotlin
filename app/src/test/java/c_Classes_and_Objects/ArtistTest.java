@@ -1,20 +1,17 @@
 package c_Classes_and_Objects;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.Before;
 import org.junit.Test;
 
 import c_Classes_and_Objects.f_Data_Classes.Artist;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
-/**
- * Shows that {@link Artist} is a mutable class
- */
 public class ArtistTest {
 
+	private static final int ID = 1;
+	private static final int NEW_ID = 2;
 
-	public static final int ID = 1;
-	public static final int NEW_ID = 2;
 	private Artist artist;
 
 	@Before
