@@ -1,6 +1,7 @@
 package b_Basics.c_ControlFlow
 
 import org.assertj.core.api.Assertions.assertThat
+import org.junit.ComparisonFailure
 import org.junit.Test
 
 class BasicTypesTest {
@@ -9,15 +10,15 @@ class BasicTypesTest {
 
     /* demonstrates how string can be formed in Kotlin */
 
-    @Test
+    @Test(expected = ComparisonFailure::class)
     fun when_getStringLiteralEscaped() {
         //WHEN
         val result = tested.getStringLiteralEscaped()
         //THEN
-        assertThat(result).isEqualTo("hello \nworld")
+        assertThat(result).isEqualTo("")
     }
 
-    @Test
+    @Test(expected = ComparisonFailure::class)
     fun when_getStringLiteralRaw() {
         //WHEN
         val result = tested.getStringLiteralRaw()
