@@ -8,9 +8,6 @@ import org.mockito.InjectMocks
 import org.mockito.Mock
 import org.mockito.junit.MockitoJUnitRunner
 
-/**
- * Tests for [Container]
- */
 @RunWith(MockitoJUnitRunner::class)
 class ContainerTest_InjectMocks {
 
