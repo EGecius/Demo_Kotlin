@@ -17,7 +17,7 @@ class BasicTypesTest {
         //WHEN
         val result = tested.getStringLiteralEscaped()
         //THEN
-        assertThat(result).isEqualTo("")
+        assertThat(result).isEqualTo("hello \nworld")
     }
 
     @Test
