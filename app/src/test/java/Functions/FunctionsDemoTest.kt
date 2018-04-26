@@ -32,4 +32,6 @@ class FunctionsDemoTest {
         foo { println("hello 4") }
     }
 
+
+
 }
