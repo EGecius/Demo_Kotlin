@@ -1,13 +1,10 @@
 package a_GettingStarted.b_idioms
 
 import org.junit.Test
-import org.junit.runner.RunWith
-import org.mockito.junit.MockitoJUnitRunner
 
-@RunWith(MockitoJUnitRunner::class)
 class ListsTest {
 
-    @Test (expected = UnsupportedOperationException::class)
+    @Test
     fun asListReturnsImmutable() {
         val list = listOf(1, 2)
 
