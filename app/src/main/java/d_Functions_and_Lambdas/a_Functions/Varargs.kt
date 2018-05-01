@@ -1,9 +1,11 @@
 package d_Functions_and_Lambdas.a_Functions
 
+import java.util.*
+
 /**
  * Variable number of arguments
  */
-class Varargs() {
+class Varargs {
 
     fun sum(vararg num: Int): Int {
         var sum = 0
@@ -23,5 +25,12 @@ class Varargs() {
         return sum
     }
 
+    fun passSingleArgumentsAndArraysIntoVararg() {
+
+        val a = arrayOf(1, 2, 3)
+        // asList takes vararg T but you can pass both arrays and single elements with spread
+        // operator
+        val list = Arrays.asList(-1, 0, *a, 4)
+    }
 
 }
