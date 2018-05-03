@@ -83,4 +83,9 @@ class WhenExpressionsTest {
         assertTrue(3 in 1..3)
     }
 
+    @Test (expected = AssertionError::class)
+    fun rangeIsInclusive2() {
+        assertTrue(4 in 1..3)
+    }
+
 }
