@@ -43,6 +43,12 @@ class LambdasKtTest {
     }
 
     @Test
+    fun `if last param is function, lambda can be placed outside parentheses`() {
+        val result = combineInts(2, 3) {a, b -> a * b}
+        assert(result == 6)
+    }
+
+    @Test
     fun transformString() {
         val result = "ONE".transform { it.toLowerCase() }
         assert(result.equals("one"))
