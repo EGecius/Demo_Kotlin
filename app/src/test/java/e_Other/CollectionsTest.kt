@@ -46,4 +46,12 @@ class CollectionsTest {
         assertThat(listWithoutNulls[0]).isEqualTo("one")
         assertThat(listWithoutNulls[1]).isEqualTo("two")
     }
+
+    @Test
+    fun `demo none()`() {
+        val rawList = mutableListOf(1, 2, 3)
+        rawList.requireNoNulls()        // returns [1, 2, 3]
+
+        if (rawList.none { it > 6 }) println("No items above 6")
+    }
 }
