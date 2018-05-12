@@ -54,4 +54,17 @@ class CollectionsTest {
 
         if (rawList.none { it > 6 }) println("No items above 6")
     }
+
+    @Test
+    fun `demo firstOrNull`() {
+        val rawList = mutableListOf(1, 2, 3)
+        val result = rawList.firstOrNull()
+        assertThat(result).isEqualTo(1)
+
+        val listOfNull = mutableListOf(null)
+        val elementNull = listOfNull.firstOrNull()
+        //does not even compile because it's null
+//        assertThat(elementNull).isNull()
+    }
+
 }
