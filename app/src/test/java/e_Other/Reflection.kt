@@ -1,4 +1,4 @@
-@file:Suppress("UNUSED_VARIABLE")
+@file:Suppress("UNUSED_VARIABLE", "MemberVisibilityCanBePrivate")
 
 package e_Other
 
@@ -20,12 +20,13 @@ class Reflection {
     @Test
     fun `demo Function References`() {
 
-        fun isOdd(x: Int) = x % 2 != 0
         val numbers = listOf(1, 2, 3)
         val filtered = numbers.filter(::isOdd)
 
         assertThat(filtered).containsExactly(1, 3)
     }
+
+    fun isOdd(x: Int) = x % 2 != 0
 
     @Test
     fun `demo Function Reference in another class`() {
@@ -36,6 +37,23 @@ class Reflection {
         val mappedToInts = strings.map(stringToInt)
 
         assertThat(mappedToInts).containsExactly(12, 13)
+    }
+
+    @Test
+    fun `demo Function Composition`() {
+
+        fun length(s: String) = s.length
+
+        val oddLength = compose(::isOdd, ::length)
+        val strings = listOf("a", "ab", "abc")
+
+        println(strings.filter(oddLength))
+    }
+
+    fun <A, B, C> compose(fun1: (B) -> C,
+                          fun2: (A) -> B)
+            : (A) -> C {
+        return { x: A -> fun1(fun2(x)) }
     }
 
 }
