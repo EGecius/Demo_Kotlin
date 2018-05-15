@@ -21,11 +21,21 @@ class Reflection {
     fun `demo Function References`() {
 
         fun isOdd(x: Int) = x % 2 != 0
-
         val numbers = listOf(1, 2, 3)
         val filtered = numbers.filter(::isOdd)
 
         assertThat(filtered).containsExactly(1, 3)
+    }
+
+    @Test
+    fun `demo Function Reference in another class`() {
+
+        val stringToInt: (s: String) -> Int = String::toInt
+        val strings = listOf("12", "13")
+
+        val mappedToInts = strings.map(stringToInt)
+
+        assertThat(mappedToInts).containsExactly(12, 13)
     }
 
 }
