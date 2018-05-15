@@ -5,6 +5,7 @@ package e_Other
 import c_Classes_and_Objects.a_ClassesAndInheritance.MyClass
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
+import kotlin.reflect.KClass
 import kotlin.reflect.KProperty0
 
 class Reflection {
@@ -65,6 +66,15 @@ class Reflection {
         assertThat(::x.name).isEqualTo("x")
 
         val kProperty0: KProperty0<Int> = ::x
+    }
+
+    @Test
+    fun `demo access to java and kotlin classes`() {
+        fun getKClass(o: Any): KClass<Any> = o.javaClass.kotlin
+
+        val myClass = MyClass()
+
+        val kClass: KClass<out MyClass> = myClass::class
     }
 
 }
