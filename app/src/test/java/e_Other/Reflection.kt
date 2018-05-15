@@ -5,6 +5,7 @@ package e_Other
 import c_Classes_and_Objects.a_ClassesAndInheritance.MyClass
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
+import kotlin.reflect.KProperty0
 
 class Reflection {
 
@@ -54,6 +55,16 @@ class Reflection {
                           fun2: (A) -> B)
             : (A) -> C {
         return { x: A -> fun1(fun2(x)) }
+    }
+
+    val x = 1
+
+    @Test
+    fun `demo property references`() {
+        assertThat(::x.get()).isEqualTo(1)
+        assertThat(::x.name).isEqualTo("x")
+
+        val kProperty0: KProperty0<Int> = ::x
     }
 
 }
