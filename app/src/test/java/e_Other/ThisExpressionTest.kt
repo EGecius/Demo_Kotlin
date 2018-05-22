@@ -2,6 +2,7 @@ package e_Other
 
 import org.junit.Test
 
+/** This example of how to link another class from KDoc - [Reflection] */
 class ThisExpressionTest {
 
     @Test
