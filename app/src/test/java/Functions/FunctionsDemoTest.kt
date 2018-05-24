@@ -29,11 +29,14 @@ class FunctionsDemoTest {
     @Test
     fun `demo passing lambdas to method`() {
 
+        // alternative syntaxes of exactly same behaviour:
+
         execute { println("hello 3") }
 
-        foo { println("hello 4") }
-    }
+        execute() { println("hello 3") }
+        execute({ println("hello 3") })
 
+    }
 
 
 }
