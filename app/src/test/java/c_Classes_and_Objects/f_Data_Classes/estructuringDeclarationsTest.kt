@@ -2,17 +2,16 @@ package c_Classes_and_Objects.f_Data_Classes
 
 import org.junit.Test
 
-/**
- * Tests for [DestructuringDeclarations]
- */
-class DestructuringDeclarationsTest {
+data class User(val name: String, val age: Int)
 
-    internal var classUnderTest: DestructuringDeclarations = DestructuringDeclarations()
+class DestructuringDeclarationsTest {
 
     @Test
     fun when__then() {
         //prints expected
-        classUnderTest.destrucingDeclarations()
+        val jane = User("Jane", 35)
+        val (name, age) = jane
+        println("$name, $age years of age")
     }
 
 }
