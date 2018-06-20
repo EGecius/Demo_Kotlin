@@ -10,6 +10,12 @@ class TypeChecksAndCasts {
         val x: String = y as String
     }
 
+    @Test
+    fun `unsafe cast can accept null when '?' added`() {
+        val y = null
+        val x: String? = y as String?
+    }
+
     @Test(expected = ClassCastException::class)
     fun `unsafe cast throws ClassCastException if types do not match`() {
         val y = 1
