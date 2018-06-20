@@ -2,15 +2,15 @@ package e_Other
 
 import org.junit.Test
 
-class TypeChecksAndCasts{
+class TypeChecksAndCasts {
 
-    @Test (expected = TypeCastException::class)
+    @Test(expected = TypeCastException::class)
     fun `unsafe cast throws TypeCastException`() {
         val y = null
         val x: String = y as String
     }
 
-    @Test (expected = ClassCastException::class)
+    @Test(expected = ClassCastException::class)
     fun `unsafe cast throws ClassCastException if types do not match`() {
         val y = 1
         val x: String? = y as String?
