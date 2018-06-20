@@ -18,13 +18,13 @@ class TypeChecksAndCasts {
 
     @Test(expected = ClassCastException::class)
     fun `unsafe cast throws ClassCastException if types do not match`() {
-        val y = 1
-        val x: String? = y as String?
+        val y: Int = 1
+        val x: String = y as String
     }
 
     @Test
     fun `safe (nullable) cast returns nulls if types do not match`() {
-        val y = 1
-        val x: String? = y as? String?
+        val y: Int = 1
+        val x: String? = y as? String
     }
 }
