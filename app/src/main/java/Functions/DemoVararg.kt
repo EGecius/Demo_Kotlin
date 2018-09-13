@@ -2,15 +2,18 @@
 
 package Functions
 
-class DemoVararg{
+class DemoVararg {
 
-    fun takeVararg(vararg strings: String) { /* ... */ }
+    fun takeVararg(vararg strings: String) {
+        /* ... */
+    }
 
     fun demo2WaysToPassVarargArgs() {
 
         // 1. Pass params
         takeVararg("one", "two")
-        // 2. use 'spread operator' -- '*' -- changes expected type from String to Array<out String>
+        // 2. use 'spread operator' -- '*' -- makes array elements appear like multiple params,
+        // just like vararg would expect
         takeVararg(strings = *arrayOf("a", "b", "c"))
     }
 }
