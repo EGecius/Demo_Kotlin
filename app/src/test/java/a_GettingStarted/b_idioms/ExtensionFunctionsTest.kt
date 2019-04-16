@@ -23,4 +23,15 @@ class ExtensionFunctionsTest {
         assertThat("11".toIntOrNull()).isEqualTo(11)
     }
 
+    @Test
+    fun `indexOfFirst works`() {
+        val list = listOf("zero", "one", "two", "three")
+
+        val result = list.indexOfFirst {
+            it == "two"
+        }
+
+        assertThat(result).isEqualTo(2)
+    }
+
 }
