@@ -1,6 +1,6 @@
 package a_GettingStarted.b_idioms
 
-class ExtensionFuntions {
+class ExtensionFunctions {
 
     // this is how you declared extension functions
 
