@@ -25,13 +25,24 @@ class ExtensionFunctionsTest {
 
     @Test
     fun `indexOfFirst works`() {
-        val list = listOf("zero", "one", "two", "three")
+        val list = listOf("zero", "one", "two", "three", "two", "two")
 
         val result = list.indexOfFirst {
             it == "two"
         }
 
         assertThat(result).isEqualTo(2)
+    }
+
+    @Test
+    fun `indexOfLast works`() {
+        val list = listOf("zero", "one", "two", "three", "two", "two")
+
+        val result = list.indexOfLast {
+            it == "two"
+        }
+
+        assertThat(result).isEqualTo(5)
     }
 
 }
