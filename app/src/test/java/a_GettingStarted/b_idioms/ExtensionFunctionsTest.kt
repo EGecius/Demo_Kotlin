@@ -45,4 +45,16 @@ class ExtensionFunctionsTest {
         assertThat(result).isEqualTo(5)
     }
 
+
+    @Test
+    fun `forEachIndexed works`() {
+        val list = listOf("zero", "one", "two", "three", "two", "two")
+
+        list.forEachIndexed{index: Int, string: String ->
+
+            println("$index $string")
+
+        }
+    }
+
 }
