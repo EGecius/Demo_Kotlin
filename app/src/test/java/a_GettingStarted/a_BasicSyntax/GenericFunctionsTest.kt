@@ -31,4 +31,14 @@ class GenericFunctionsTest {
         assert(listOfStrings[1] == "two")
     }
 
+    @Test
+    fun `demo reified`() {
+
+    	"myString".toObjectReified<MyData>()
+        "myString".toObjectDefault(MyData::class)
+
+    }
+
 }
+
+class MyData
