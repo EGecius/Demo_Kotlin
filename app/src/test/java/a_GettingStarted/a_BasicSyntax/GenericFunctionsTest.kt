@@ -35,6 +35,7 @@ class GenericFunctionsTest {
     fun `demo reified`() {
 
     	"myString".toObjectReified<MyData>()
+
         "myString".toObjectDefault(MyData::class)
 
     }
