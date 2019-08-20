@@ -1,6 +1,7 @@
 package z_android
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import c_Classes_and_Objects.e_Extensions.doubleTheString
 import c_Classes_and_Objects.e_Extensions.showToast
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         childType.doubleTheString()
 
         /* Support lambdas by default */
-        findViewById(R.id.button).setOnClickListener {
+        findViewById<Button>(R.id.button).setOnClickListener {
             showToast("shown from extension function")
         }
 
