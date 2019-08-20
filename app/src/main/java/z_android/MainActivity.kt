@@ -1,7 +1,7 @@
 package z_android
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import c_Classes_and_Objects.e_Extensions.doubleTheString
 import c_Classes_and_Objects.e_Extensions.showToast
 import com.egecius.android.R
