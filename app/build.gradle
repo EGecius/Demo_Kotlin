@@ -36,6 +36,7 @@ dependencies {
         exclude module: 'rxjava'
     }
 
+    api 'io.kotest:kotest-assertions-core:4.6.0'
     testImplementation 'junit:junit:4.12'
     testImplementation ('com.nhaarman:mockito-kotlin:1.4.0') {
         exclude group: 'org.jetbrains.kotlin'
