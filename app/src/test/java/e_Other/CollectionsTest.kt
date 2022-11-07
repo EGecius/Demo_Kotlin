@@ -2,6 +2,7 @@
 
 package e_Other
 
+import io.kotest.matchers.shouldBe
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 
@@ -67,4 +68,15 @@ class CollectionsTest {
 //        assertThat(elementNull).isNull()
     }
 
+    @Test
+    fun `map() maps each item to another item`() {
+
+    	listOf("A", "B", "C").map { it + "1" } shouldBe listOf("A1", "B1", "C1")
+    }
+
+    @Test
+    fun `flatMap() maps each item to another Iterable, thus allowing to flattten the original Iterable`() {
+
+        listOf("AB", "CD").flatMap { it.toList() } shouldBe listOf("A", "B", "C", "D")
+    }
 }
