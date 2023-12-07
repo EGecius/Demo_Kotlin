@@ -1,7 +1,8 @@
 @file:Suppress("MemberVisibilityCanBePrivate")
 
-package Functions
+package functions
 
+import Functions.FunctionsDemo
 import org.junit.Before
 import org.junit.Test
 
