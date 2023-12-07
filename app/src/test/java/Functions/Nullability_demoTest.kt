@@ -18,7 +18,7 @@ class Nullability_demoTest {
         //THEN
     }
 
-    @Test (expected = KotlinNullPointerException::class)
+    @Test (expected = NullPointerException::class)
     fun when_thrownNpeBecauseOfExclamationMarks_then_throwsKotlinNullPointerException() {
         //WHEN
         demo.thrownNpeBecauseOfExclamationMarks()

@@ -13,11 +13,11 @@ class ExceptionHandlingTest {
             throwMyException()
         }
 
-        result shouldBe Result.failure(java.lang.Exception("Egis"))
+        result shouldBe Result.failure(Exception("Egis"))
 
     }
 
     private fun throwMyException() {
-        throw java.lang.Exception("Egis")
+        throw Exception("Egis")
     }
 }
